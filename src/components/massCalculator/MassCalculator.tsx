@@ -63,7 +63,9 @@ export default function MassCalculator() {
   return (
     <>
       <Wrapper>
-        <p>Enter your details bellow in metric system (cm / kg)</p>
+        <CalculatorTitle>
+          <p>Enter your details bellow in metric system (cm / kg)</p>
+        </CalculatorTitle>
         <Container>
           <InfoContainer>
             <label>Height</label>
@@ -137,35 +139,75 @@ const Wrapper = styled.div`
   background-color: white;
   color: black;
   width: 100%;
-  max-width: 30rem;
-  max-height: 24rem;
+  height: auto;
+  max-width: 34rem;
+  max-height: 26rem;
   border-radius: 0.5rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px 5px #d0cece;
+  box-shadow: 5px 5px 25px 5px #d0cece;
+  p {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    margin: 2rem;
+    max-width: 26rem;
+    max-height: 34rem;
+  }
+`;
+
+const CalculatorTitle = styled.div`
+  p {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #233247;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  @media (max-width: 768px) {
+    button {
+      margin-top: 0;
+    }
+  }
 `;
 
 const InfoContainer = styled(Container)`
   flex-direction: column;
   justify-content: space-between;
+  label {
+    font-size: 14px;
+    color: #818181;
+  }
+  @media (max-width: 768px) {
+    margin: 0.5rem;
+    input {
+      width: 90%;
+      margin: 1rem 0;
+      font-size: 24px;
+    }
+  }
 `;
 
 const Input = styled.input`
-  padding: 6px;
+  padding: 8px;
   font-size: 16px;
   border-width: 1px;
   border-color: #cccccc;
   background-color: #ffffff;
-  color: #000000;
+  color: #6889ff;
   font-weight: 700;
   border-style: solid;
-  border-radius: 0px;
+  border-radius: 8px;
   box-shadow: 0px 0px 5px #6889ff;
   margin-right: 0.5rem;
   margin-top: 0.5rem;
+  height: 2.5rem;
+  font-size: 18.8px;
 
   &:focus {
     outline: none;
@@ -175,6 +217,8 @@ const Input = styled.input`
 const InfoContainerShape = styled(Container)`
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  height: auto;
   background-color: #6889ff;
   color: #ffffff;
   max-height: 16rem;
@@ -182,6 +226,12 @@ const InfoContainerShape = styled(Container)`
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.2em;
+  }
   button {
     margin-top: 0;
   }
@@ -190,7 +240,6 @@ const InfoContainerShape = styled(Container)`
 const ShapeContainer = styled.div`
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #6889ff;
   color: #ffffff;
 `;
 
@@ -205,7 +254,12 @@ const ResultContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  height: 8rem;
   max-width: 25rem;
+  @media (max-width: 768px) {
+    height: 10rem;
+    padding: 2rem;
+  }
 `;
 
 const ResultContainerText = styled.div<{ bmiColor: number }>`
@@ -228,5 +282,9 @@ const ResultContainerMessage = styled(ResultContainer)`
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0 2rem 0 2rem;
   }
 `;
