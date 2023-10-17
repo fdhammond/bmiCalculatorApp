@@ -3,28 +3,26 @@ import MassCalculator from "./massCalculator/MassCalculator";
 
 export default function Hero() {
   return (
-    <>
-      <HeroContainer>
-        <HeroContainerText>
-          <img
-            src="https://res.cloudinary.com/dzkqopnby/image/upload/v1697553635/logoguy-01_vv8f6b.png"
-            alt=""
-          />
-          <HeroText>
-            <h1>Body Mass Index Calculator</h1>
-            <p>
-              Better understand your weight in relation to your height using our
-              body mass index (BM) calculator. While BMI is not the sole
-              determinant of a healthy weight, it offers a valuable starting
-              point to evaluate your overall health and well-being.
-            </p>
-          </HeroText>
-        </HeroContainerText>
-        <MassCalculatorContainer>
-          <MassCalculator />
-        </MassCalculatorContainer>
-      </HeroContainer>
-    </>
+    <HeroContainer>
+      <HeroContainerText>
+        <img
+          src="https://res.cloudinary.com/dzkqopnby/image/upload/v1697553635/logoguy-01_vv8f6b.png"
+          alt=""
+        />
+        <HeroText>
+          <h1>Body Mass Index Calculator</h1>
+          <p>
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </HeroText>
+      </HeroContainerText>
+      <MassCalculatorContainer>
+        <MassCalculator />
+      </MassCalculatorContainer>
+    </HeroContainer>
   );
 }
 
