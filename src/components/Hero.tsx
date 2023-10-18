@@ -35,6 +35,9 @@ const HeroContainer = styled.div`
   height: 90vh;
   background-color: white;
   color: #233247;
+  @media (max-width: 768px) {
+    height: 80vh;
+  }
 `;
 
 const HeroContainerText = styled(HeroContainer)`
@@ -44,7 +47,7 @@ const HeroContainerText = styled(HeroContainer)`
     rgba(225, 241, 254, 1) 0%,
     rgba(240, 254, 255, 1) 50%,
     rgba(225, 241, 254, 1) 80%,
-    rgba(185, 224, 255, 1) 100%
+    rgb(185, 224, 255) 100%
   );
   border-radius: 0 0 40px 40px;
   width: 100%;

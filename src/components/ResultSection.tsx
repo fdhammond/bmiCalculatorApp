@@ -36,7 +36,12 @@ const Container = styled.div`
   justify-content: center;
   align-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8rem;
+  @media (max-width: 768px) {
+    margin-top: 40rem;
+    gap: 2rem;
+  }
 `;
 
 const ResultImage = styled.div`
@@ -57,6 +62,10 @@ const ResultImageShape = styled.div`
   border-radius: 45px;
   height: 18rem;
   width: 30rem;
+  @media (max-width: 768px) {
+    height: 10rem;
+    width: 20rem;
+  }
 `;
 
 const ResultText = styled.div`
@@ -64,4 +73,8 @@ const ResultText = styled.div`
   max-width: 35rem;
   height: 100%;
   line-height: 1.5rem;
+  text-align: left;
+  @media (max-width: 768px) {
+    margin: 0 4rem;
+  }
 `;
