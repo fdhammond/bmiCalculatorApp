@@ -155,6 +155,9 @@ const Wrapper = styled.div`
     max-width: 26rem;
     max-height: 34rem;
   }
+  @media (min-width: 1024px) {
+    margin-right: 6rem;
+  }
 `;
 
 const CalculatorTitle = styled.div`
