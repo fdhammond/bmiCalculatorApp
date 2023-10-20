@@ -8,55 +8,47 @@ type AdviceProps = {
 
 export default function AdviceBox({ image, title, paragraph }: AdviceProps) {
   return (
-    <>
-      <Wrapper>
-        <ImageContainer>
-          <ImageBackground>
-            <img src={image} alt="" />
-          </ImageBackground>
-        </ImageContainer>
-        <TitleContainer>
-          <h1>{title}</h1>
-        </TitleContainer>
-        <p>{paragraph}</p>
-      </Wrapper>
-    </>
+    <Wrapper>
+      <ImageContainer>
+        <ImageBackground>
+          <img src={image} alt="" />
+        </ImageBackground>
+      </ImageContainer>
+      <ContentContainer>
+        <Title>{title}</Title>
+        <Paragraph>{paragraph}</Paragraph>
+      </ContentContainer>
+    </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: start;
 
-  h1 {
-    font-size: 1.5em;
-  }
-
-  p {
-    font-size: 1em;
-    margin-top: 0;
+  @media (max-width: 768px) {
+    align-items: center;
   }
 `;
 
 const ImageContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-  img {
-    max-width: 50px;
-    max-height: 50px;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    margin-top: 1.5rem;
   }
 `;
 
 const ImageBackground = styled.div`
-  width: 70px; /* Increase the width and height for a larger background circle */
-  height: 70px; /* Adjust the size as needed */
-  border-radius: 50%; /* Creates a circle */
-  background-color: #ccc; /* Grey color background */
+  width: 75px;
+  height: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   img {
     max-width: 80%;
@@ -64,11 +56,25 @@ const ImageBackground = styled.div`
   }
 `;
 
-const TitleContainer = styled.div`
+const ContentContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  margin: 0.5rem 0%;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+`;
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  margin: 0;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
+const Paragraph = styled.p`
+  font-size: 1em;
+  margin-top: 1.5rem;
+  max-width: 300px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;

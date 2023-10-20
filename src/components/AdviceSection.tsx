@@ -18,19 +18,19 @@ export default function AdviceSection() {
 }
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); // Create three equal columns
-  gap: 20px; // Adjust this value for spacing between columns
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
   margin: 10rem 10rem;
-  height: 100%;
+  background-color: #e8f3f9;
+  border-radius: 20px;
+  padding: 6rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; // On smaller screens, have one column
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 2rem 0;
+    margin: 8rem 2rem;
   }
-
-  // You can add additional CSS for styling the columns if needed
-  /* .column {
-       border: 1px solid #ccc;
-       padding: 10px;
-  } */
 `;

@@ -39,7 +39,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   gap: 8rem;
   @media (max-width: 768px) {
-    margin-top: 40rem;
+    margin-top: 48rem;
     gap: 2rem;
   }
 `;
