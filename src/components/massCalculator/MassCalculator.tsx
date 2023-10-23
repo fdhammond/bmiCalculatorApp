@@ -151,7 +151,7 @@ const Wrapper = styled.div`
     font-weight: 700;
   }
   @media (max-width: 768px) {
-    margin: 2rem;
+    margin: 4rem;
     max-width: 26rem;
     max-height: 34rem;
   }
@@ -186,6 +186,13 @@ const InfoContainer = styled(Container)`
     font-size: 14px;
     color: #818181;
   }
+
+  &:nth-child(1) {
+    margin-right: 2rem;
+  }
+  &:nth-child(2) {
+    margin-right: 1rem;
+  }
   @media (max-width: 768px) {
     margin: 0.5rem;
     input {
@@ -207,11 +214,10 @@ const Input = styled.input`
   border-style: solid;
   border-radius: 8px;
   box-shadow: 0px 0px 5px #6889ff;
-  margin-right: 0.5rem;
   margin-top: 0.5rem;
   height: 2.5rem;
   font-size: 18.8px;
-
+  width: 100%;
   &:focus {
     outline: none;
   }
@@ -250,6 +256,8 @@ const Button = styled.button`
   margin-top: 1rem;
   width: 100%;
   max-width: 10rem;
+  color: #233247;
+  border-color: #233247;
 `;
 
 const ResultContainer = styled.div`

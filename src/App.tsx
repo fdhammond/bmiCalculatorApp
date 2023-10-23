@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import Hero from "./components/Hero";
 import ResultSection from "./components/ResultSection";
 import AdviceSection from "./components/AdviceSection";
+import Limitations from "./components/Limitations";
 
 function App() {
   return (
@@ -9,13 +9,9 @@ function App() {
       <Hero />
       <ResultSection />
       <AdviceSection />
+      <Limitations />
     </>
   );
 }
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 export default App;
