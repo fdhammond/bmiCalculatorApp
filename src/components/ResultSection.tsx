@@ -38,9 +38,21 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 8rem;
+
   @media (max-width: 768px) {
-    margin-top: 48rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     gap: 2rem;
+    margin-top: 58rem;
+  }
+
+  @media (max-width: 668px) {
+    margin-top: 54rem;
   }
 `;
 
@@ -74,7 +86,10 @@ const ResultText = styled.div`
   height: 100%;
   line-height: 1.5rem;
   text-align: left;
+
   @media (max-width: 768px) {
-    margin: 0 4rem;
+    max-width: 300px;
+    margin-right: 5rem;
+    margin-left: 5rem;
   }
 `;

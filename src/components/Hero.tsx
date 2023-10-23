@@ -36,7 +36,7 @@ const HeroContainer = styled.div`
   background-color: white;
   color: #233247;
   @media (max-width: 768px) {
-    height: 80vh;
+    height: 110vh;
   }
 `;
 
@@ -89,10 +89,18 @@ const MassCalculatorContainer = styled.div`
   align-content: center;
   margin-left: 46rem;
   position: absolute;
-  overflow: hidden;
+
   @media (max-width: 768px) {
     width: 100%;
-    margin-left: 0;
+    height: 100vh;
+    align-self: center;
+    flex-direction: column;
+    margin: 12rem 6rem 6rem 3rem;
     top: 75%;
+  }
+  @media (max-width: 667px) {
+    top: 70%;
+    width: 90%;
+    margin-left: 2.5rem;
   }
 `;

@@ -21,16 +21,24 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-content: center;
-  margin: 10rem 10rem;
+  margin: 10rem 2rem;
   background-color: #e8f3f9;
   border-radius: 20px;
   padding: 6rem;
 
+  @media (max-width: 667px) {
+    margin-left: 1rem;
+    padding: 2rem 0;
+    max-width: 300px;
+  }
+
   @media (max-width: 768px) {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-self: center;
+    margin-left: 1rem;
     padding: 2rem 0;
-    margin: 8rem 2rem;
+    max-width: 350px;
   }
 `;

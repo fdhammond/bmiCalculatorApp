@@ -27,7 +27,14 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: start;
 
+  @media (max-width: 667px) {
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+  }
+
   @media (max-width: 768px) {
+    padding: 0 2rem;
     align-items: center;
   }
 `;

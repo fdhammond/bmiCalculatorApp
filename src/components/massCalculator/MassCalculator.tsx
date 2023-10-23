@@ -7,6 +7,7 @@ export default function MassCalculator() {
   const [weight, setWeight] = useState<number | string>("");
   const [bmi, setBmi] = useState<number | string>("");
   const [message, setMessage] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
 
   const handleInputChangeHeight = (e: React.ChangeEvent<HTMLInputElement>) => {
     const parsedValue = parseInt(e.target.value, 10) as number;
@@ -19,7 +20,12 @@ export default function MassCalculator() {
   };
 
   const handleButtonClick = () => {
-    setBmi(() => Number(massCalculator(Number(height), Number(weight))));
+    if (height === "" || weight === "") {
+      setError(true);
+    } else {
+      setBmi(() => Number(massCalculator(Number(height), Number(weight))));
+      setError(false);
+    }
   };
 
   const handleButtonClickReset = () => {
@@ -74,6 +80,7 @@ export default function MassCalculator() {
               id="metric"
               value={height}
               onChange={handleInputChangeHeight}
+              error={error}
             />
           </InfoContainer>
 
@@ -84,6 +91,7 @@ export default function MassCalculator() {
               id="imperial"
               value={weight}
               onChange={handleInputChangeWeight}
+              error={error}
             />
           </InfoContainer>
         </Container>
@@ -150,9 +158,10 @@ const Wrapper = styled.div`
     font-size: 1.2em;
     font-weight: 700;
   }
+
   @media (max-width: 768px) {
-    margin: 4rem;
-    max-width: 26rem;
+    margin-left: 2rem;
+    max-width: 22.8rem;
     max-height: 34rem;
   }
   @media (min-width: 1024px) {
@@ -203,11 +212,14 @@ const InfoContainer = styled(Container)`
   }
 `;
 
-const Input = styled.input`
+const Input = styled.input.attrs((props) => ({
+  style: {
+    borderColor: props.error ? "red" : "#cccccc",
+    borderWidth: props.error ? "2px" : "1px",
+  },
+}))`
   padding: 8px;
   font-size: 16px;
-  border-width: 1px;
-  border-color: #cccccc;
   background-color: #ffffff;
   color: #6889ff;
   font-weight: 700;
@@ -256,8 +268,8 @@ const Button = styled.button`
   margin-top: 1rem;
   width: 100%;
   max-width: 10rem;
-  color: #233247;
-  border-color: #233247;
+  color: white;
+  border-color: none;
 `;
 
 const ResultContainer = styled.div`
