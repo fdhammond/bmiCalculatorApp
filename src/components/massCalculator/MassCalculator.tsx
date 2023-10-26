@@ -153,7 +153,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: auto;
   max-width: 34rem;
-  max-height: 26rem;
+  max-height: 36rem;
   border-radius: 0.5rem;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px 5px #d0cece;

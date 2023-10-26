@@ -158,6 +158,10 @@ const TextContainer = styled.div`
       max-width: 100%;
     }
   }
+
+  @media (max-width: 1280px) {
+    position: relative;
+  }
 `;
 
 const Grid = styled.div`
@@ -168,7 +172,7 @@ const Grid = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; // Single column layout for small screens
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -185,9 +189,5 @@ const GridItem = styled.div`
   p {
     margin: 0;
     color: #666;
-  }
-
-  @media (max-width: 768px) {
-    // Add mobile-specific styles if needed
   }
 `;
