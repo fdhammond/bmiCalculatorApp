@@ -36,7 +36,7 @@ const HeroContainer = styled.div`
   background-color: white;
   color: #233247;
   @media (max-width: 768px) {
-    height: 110vh;
+    height: 100vh;
   }
 `;
 
@@ -83,7 +83,6 @@ const HeroText = styled.div`
 `;
 
 const MassCalculatorContainer = styled.div`
-  width: 50%;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -92,15 +91,13 @@ const MassCalculatorContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 100vh;
-    align-self: center;
-    flex-direction: column;
-    margin: 12rem 6rem 6rem 3rem;
+    margin: 20rem 6rem 6rem 3rem;
     top: 75%;
   }
   @media (max-width: 667px) {
-    top: 70%;
+    display: flex;
+    margin-left: 2rem;
+    justify-content: center;
     width: 90%;
-    margin-left: 2.5rem;
   }
 `;

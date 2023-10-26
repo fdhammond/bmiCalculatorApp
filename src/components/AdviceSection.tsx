@@ -37,7 +37,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin-left: 1rem;
+    margin: 5rem auto;
     padding: 2rem 0;
     max-width: 350px;
   }
