@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import massCalculator from "../../helpers/massCalculator";
 
+interface InputProps {
+  onError: boolean;
+  // Add any other props you expect here
+}
+
 export default function MassCalculator() {
   const [height, setHeight] = useState<number | string>("");
   const [weight, setWeight] = useState<number | string>("");
@@ -80,7 +85,7 @@ export default function MassCalculator() {
               id="metric"
               value={height}
               onChange={handleInputChangeHeight}
-              error={error}
+              onError={error}
             />
           </InfoContainer>
 
@@ -91,7 +96,7 @@ export default function MassCalculator() {
               id="imperial"
               value={weight}
               onChange={handleInputChangeWeight}
-              error={error}
+              onError={error}
             />
           </InfoContainer>
         </Container>
@@ -212,12 +217,7 @@ const InfoContainer = styled(Container)`
   }
 `;
 
-const Input = styled.input.attrs((props) => ({
-  style: {
-    borderColor: props.error ? "red" : "#cccccc",
-    borderWidth: props.error ? "2px" : "1px",
-  },
-}))`
+const Input = styled.input<InputProps>`
   padding: 8px;
   font-size: 16px;
   background-color: #ffffff;
@@ -230,6 +230,8 @@ const Input = styled.input.attrs((props) => ({
   height: 2.5rem;
   font-size: 18.8px;
   width: 100%;
+  border-color: ${(props) => (props.onError ? "red" : "#cccccc")};
+  border-width: ${(props) => (props.onError ? "2px" : "1px")};
   &:focus {
     outline: none;
   }
@@ -268,7 +270,7 @@ const Button = styled.button`
   margin-top: 1rem;
   width: 100%;
   max-width: 10rem;
-  color: white;
+  color: black;
   border-color: none;
 `;
 
