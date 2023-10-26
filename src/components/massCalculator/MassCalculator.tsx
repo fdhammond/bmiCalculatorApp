@@ -4,7 +4,6 @@ import massCalculator from "../../helpers/massCalculator";
 
 interface InputProps {
   onError: boolean;
-  // Add any other props you expect here
 }
 
 export default function MassCalculator() {
