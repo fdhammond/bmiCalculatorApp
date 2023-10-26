@@ -86,12 +86,12 @@ const MassCalculatorContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-content: center;
-  margin-left: 46rem;
+  margin-left: 55%;
   position: absolute;
 
   @media (max-width: 768px) {
     width: 100%;
-    margin: 20rem 6rem 6rem 3rem;
+    margin: 20rem 6rem 6rem 2rem;
     top: 75%;
   }
   @media (max-width: 667px) {
